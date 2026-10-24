@@ -1,0 +1,24 @@
+name: NoSpectateTp
+version: '${project.version}'
+main: net.nospectatetp.NoSpectateTp
+api-version: '1.21'
+author: NoSpectateTp
+description: Restrict spectator-mode number-key teleport to players via a permission node.
+
+commands:
+  nospectatetp:
+    description: NoSpectateTp main command.
+    usage: "/nospectatetp <reload|help>"
+    aliases: [nstp]
+    permission: nospectatetp.command
+
+permissions:
+  nospectatetp.command:
+    description: Allows access to the /nospectatetp command.
+    default: true
+  nospectatetp.use:
+    description: Allows the player to use the spectator-mode number-key teleport to players.
+    default: false
+  nospectatetp.admin:
+    description: Allows managing the NoSpectateTp plugin (reload config, etc.).
+    default: op
